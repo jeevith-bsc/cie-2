@@ -1,0 +1,615 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d0d0d;
+  color: white;
+}
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #151515;
+  border-bottom: 1px solid #292929;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ff3b30;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff3b30;
+}
+
+.page {
+  padding: 80px 8%;
+}
+
+.page h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.page p {
+  color: #aaaaaa;
+  font-size: 18px;
+}
+/* =========================
+   HOME / HERO
+========================= */
+
+.home {
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 540px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(255, 59, 48, 0.18),
+      transparent 35%
+    ),
+    #0d0d0d;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-tag {
+  color: #ff3b30;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: 65px;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #ff3b30;
+}
+
+.hero-description {
+  max-width: 600px;
+  color: #a9a9a9;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #ff3b30;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #e62e24;
+}
+
+.secondary-btn {
+  border: 1px solid #444;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #1c1c1c;
+}
+
+.hero-icon {
+  font-size: 150px;
+  opacity: 0.8;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-section {
+  padding: 60px 8%;
+  background: #111111;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.small-title {
+  color: #ff3b30;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.workout-count {
+  color: #777;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #181818;
+  border: 1px solid #292929;
+  padding: 28px;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff3b30;
+}
+
+.stat-card h3 {
+  color: #888;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.stat-card h2 {
+  color: white;
+  font-size: 35px;
+  margin: 12px 0;
+}
+
+.stat-card p {
+  color: #666;
+  margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-description {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-icon {
+    font-size: 90px;
+    margin-top: 50px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 13px;
+  }
+}
+/* =========================
+   ADD WORKOUT FORM
+========================= */
+
+.form-page {
+  max-width: 850px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.form-header {
+  margin-bottom: 35px;
+}
+
+.form-header h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.form-header > p:last-child {
+  color: #888;
+}
+
+.workout-form {
+  background: #161616;
+  border: 1px solid #292929;
+  padding: 35px;
+  border-radius: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #0d0d0d;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff3b30;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  background: #ff3b30;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #e62e24;
+}
+
+.form-message {
+  background: #202020;
+  border-left: 3px solid #ff3b30;
+  padding: 12px;
+  color: #dddddd;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   WORKOUT HISTORY
+========================= */
+
+.workouts-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.workouts-header h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.workouts-header > div > p:last-child {
+  color: #888;
+}
+
+.workout-tools {
+  margin: 35px 0 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+.workout-tools input,
+.workout-tools select {
+  padding: 14px;
+  background: #161616;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  outline: none;
+}
+
+.workout-tools input:focus,
+.workout-tools select:focus {
+  border-color: #ff3b30;
+}
+
+.results-count {
+  color: #777;
+  font-size: 14px;
+}
+
+.workout-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.workout-card {
+  background: #161616;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.workout-card:hover {
+  border-color: #444;
+}
+
+.workout-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.workout-card h2 {
+  margin: 12px 0 20px;
+}
+
+.muscle-badge {
+  background: rgba(255, 59, 48, 0.12);
+  color: #ff3b30;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #ff5b52;
+  border: 1px solid #542c29;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #ff3b30;
+  color: white;
+}
+
+.workout-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #292929;
+  padding-top: 20px;
+}
+
+.workout-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.workout-details span {
+  color: #666;
+  font-size: 11px;
+}
+
+.workout-details strong {
+  font-size: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 70px 20px;
+  background: #161616;
+  border: 1px dashed #333;
+  border-radius: 10px;
+}
+
+.empty-state p {
+  color: #777;
+}
+
+@media (max-width: 700px) {
+
+  .workout-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .workout-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+/* =========================
+   WELCOME MESSAGE
+========================= */
+
+.welcome-box {
+  margin-top: 25px;
+  background: #181818;
+  border: 1px solid #292929;
+  border-left: 4px solid #ff3b30;
+  border-radius: 8px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome-icon {
+  font-size: 40px;
+}
+
+.welcome-box h3 {
+  margin: 0 0 7px;
+}
+
+.welcome-box p {
+  margin: 0;
+  color: #888;
+  line-height: 1.5;
+}
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.about-header {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 55px;
+  margin: 10px 0;
+}
+
+.about-header > p:last-child {
+  color: #888;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  background: #161616;
+  border: 1px solid #292929;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.about-card:hover {
+  border-color: #ff3b30;
+}
+
+.about-card span {
+  font-size: 35px;
+}
+
+.about-card h2 {
+  margin: 20px 0 10px;
+}
+
+.about-card p {
+  color: #888;
+  line-height: 1.6;
+}
+
+.tech-section {
+  margin-top: 70px;
+}
+
+.tech-section h2 {
+  font-size: 32px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.tech-list span {
+  background: #181818;
+  border: 1px solid #333;
+  padding: 10px 18px;
+  border-radius: 25px;
+  color: #cccccc;
+}
+
+@media (max-width: 750px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
